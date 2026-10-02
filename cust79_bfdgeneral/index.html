@@ -782,10 +782,11 @@
 
         .fact-flip-card {
             background: transparent;
-            height: 160px;
+            height: 150px;
             cursor: pointer;
             user-select: none;
             -webkit-user-select: none;
+            min-width: 0;
         }
 
         .fact-flip-inner {
@@ -1448,11 +1449,41 @@
                 pointer-events: none;
             }
             .facts-flip-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
+                width: 100%;
+                margin-top: 8px;
             }
+
             .fact-flip-card {
-                height: 140px;
+                height: 135px;
+                min-width: 0;
+            }
+
+            .fact-flip-front,
+            .fact-flip-back {
+                padding: 12px 8px;
+                border-radius: 14px;
+            }
+
+            .fact-card-num {
+                font-size: 1.7rem;
+            }
+
+            .fact-card-label {
+                font-size: 8px;
+                letter-spacing: 0.12em;
+            }
+
+            .fact-card-title {
+                font-size: 0.95rem;
+                line-height: 1.1;
+                margin-bottom: 5px;
+            }
+
+            .fact-card-desc {
+                font-size: 0.68rem;
+                line-height: 1.3;
             }
             .photo-grid-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -1681,8 +1712,8 @@
                             <span class="fact-card-label">FACT 01</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Merasa Dilibatkan</div>
-                            <div class="fact-card-desc">dd suka saat abang mau ngabarin dan pap kegiatan abang ke dd tanpa harus dd minta dulu. hal sederhana yang bikin dd seneng karena dd merasa dilibatkan dalam hari-hari abang. rasanya dd ikut jadi bagian dari keseharian abang, walaupun kita gaa selalu bersama.</div>
+                            <div class="fact-card-title">merasa dilibatkan</div>
+                            <div class="fact-card-desc">dd suka saat abang ngabarin dan pap kegiatan abang tanpa harus dd minta dulu. hal sederhana yang bikin dd seneng karena merasa jadi bagian dari keseharian abang.</div>
                         </div>
                     </div>
                 </div>
@@ -1694,8 +1725,8 @@
                             <span class="fact-card-label">FACT 02</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Hal Kecil yang Berarti</div>
-                            <div class="fact-card-desc">dd suka cara abang bikin hal-hal sederhana terasa spesial. bukan cuma tentang apa yang abang kasih, tapi juga tentang usaha, perhatian, dan waktu yang abang luangin buat dd.</div>
+                            <div class="fact-card-title">hal kecil yang berarti</div>
+                            <div class="fact-card-desc">dd suka perhatian dan usaha kecil abang yang bikin dd merasa disayang, bahkan lewat hal-hal sederhana.</div>
                         </div>
                     </div>
                 </div>
@@ -1707,8 +1738,8 @@
                             <span class="fact-card-label">FACT 03</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Lelaki yang dd Banggakan</div>
-                            <div class="fact-card-desc">dd selalu punya alasan buat bangga sama abang. sd seneng lihat abang berusaha buat mencapai apa yang abang inginkan, dan dd berharap dd bisa terus ada buat mendukung abang dalam setiap prosesnya</div>
+                            <div class="fact-card-title">lelaki yang dd banggakan</div>
+                            <div class="fact-card-desc">dd selalu bangga sama usaha dan pencapaian abang. dd bakal selalu dukung abang buat meraih impian abang.</div>
                         </div>
                     </div>
                 </div>
@@ -1720,8 +1751,8 @@
                             <span class="fact-card-label">FACT 04</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Senyum yang dd suka</div>
-                            <div class="fact-card-desc">dd suka lihat abang bahagia, ketawa, dan cerita dengan semangat tentang hal-hal yang abang sukai. ada rasa seneng tersendiri saat dd tahu abang lagi bahagia, karena kebahagiaan abang juga berarti buat dd.</div>
+                            <div class="fact-card-title">senyum yang dd suka</div>
+                            <div class="fact-card-desc">dd suka lihat abang bahagia dan ketawa. rasanya ikut seneng setiap kali abang bahagia.</div>
                         </div>
                     </div>
                 </div>
@@ -1733,8 +1764,8 @@
                             <span class="fact-card-label">FACT 05</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Tempat Berbagi Cerita</div>
-                            <div class="fact-card-desc">dd suka bisa cerita banyak hal ke abang, mulai dari hal random sampai hal yang dd pikirin seharian. dd berharap kita selalu bisa saling mendengarkan, saling memahami, dan jadi tempat ternyaman buat berbagi cerita.</div>
+                            <div class="fact-card-title">tempat berbagi cerita</div>
+                            <div class="fact-card-desc">dd suka cerita banyak hal ke abang. dd berharap kita selalu bisa saling mendengarkan dan memahami.</div>
                         </div>
                     </div>
                 </div>
@@ -1746,8 +1777,8 @@
                             <span class="fact-card-label">FACT 06</span>
                         </div>
                         <div class="fact-flip-back">
-                            <div class="fact-card-title">Lelaki yang Ingin dd Pilih</div>
-                            <div class="fact-card-desc">Dari sekian banyak hal yang dd harapkan, salah satunya adalah bisa terus tumbuh bersama abang. Belajar memahami satu sama lain, memperbaiki kesalahan, dan membangun hubungan yang lebih baik. dd berharap kita bisa terus memilih satu sama lain dan suatu hari nanti mewujudkan masa depan yang selama ini kita harapkan.💗</div>
+                            <div class="fact-card-title">lelaki yang ingin dd pilih</div>
+                            <div class="fact-card-desc">dd berharap kita terus tumbuh bersama, saling memperbaiki diri, dan mewujudkan masa depan yang kita impikan. 🤍</div>
                         </div>
                     </div>
                 </div>
